@@ -33,7 +33,7 @@ public interface IGameState extends INamedObject {
 	 * @return Current specie level.
 	 * @throws IllegalArgumentException If the given <tt>specie</tt> is <tt>null</tt>
 	 */
-	SpecieLevel getSpecieLevel(ISpecie specie) throws IllegalArgumentException;
+	SpeciesLevel getSpeciesLevel(ISpecies specie) throws IllegalArgumentException;
 
 	/**
 	 * Computes and returns the game progression percentage.

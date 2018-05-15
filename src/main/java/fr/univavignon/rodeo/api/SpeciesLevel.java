@@ -5,7 +5,7 @@ package fr.univavignon.rodeo.api;
  * 
  * @author fv
  */
-public enum SpecieLevel {
+public enum SpeciesLevel {
 
 	/** Novice level. **/
 	NOVICE(0),
@@ -29,7 +29,7 @@ public enum SpecieLevel {
 	 * 
 	 * @param requiredXP Amount of XP required to reach this level.
 	 */
-	private SpecieLevel(final int requiredXP) {
+	private SpeciesLevel(final int requiredXP) {
 		this.requiredXP = requiredXP;
 	}
 

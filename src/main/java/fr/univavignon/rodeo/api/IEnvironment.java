@@ -25,6 +25,6 @@ public interface IEnvironment extends INamedObject {
 	 * 
 	 * @return List of species available.
 	 */
-	List<ISpecie> getSpecies();
+	List<ISpecies> getSpecies();
 
 }

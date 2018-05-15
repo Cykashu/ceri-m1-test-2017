@@ -7,7 +7,7 @@ import java.util.List;
  * 
  * @author fv
  */
-public interface ISpecie extends INamedObject {
+public interface ISpecies extends INamedObject {
 
 	/**
 	 * Getter for the target area in which this

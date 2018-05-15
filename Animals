@@ -1,0 +1,56 @@
+Buffalo
+	CapeBuffalo
+	"Cape Buffalo"
+	0
+	false
+	false
+	false
+Buffalo
+	ForestBuffalo
+	"Forest Buffalo"
+	1
+	false
+	false
+	false
+Buffalo
+	WaterBuffalo
+	"Water Buffalo"
+	3
+	false
+	false
+	false
+Buffalo
+	Bison
+	"Bison"
+	14
+	false
+	false
+	false
+Buffalo
+	KerfuffleO
+	"Kerfuffle'o"
+	30
+	false
+	false
+	false
+Buffalo
+	Diabuffalo
+	"Diabuffalo"
+	30
+	true
+	false
+	false
+Buffalo
+	Bufferrari
+	"Bufferrari"
+	14
+	false
+	false
+	false
+Buffalo
+	BuffTheMagicDragon
+	"Buff the Magic Dragon"
+	14
+	false
+	true
+	false
