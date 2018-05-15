@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 
 public class IAnimalTest<T extends IAnimal> {
 	protected static final String DEFAULT_NAME = "IAnimal";
@@ -24,7 +24,7 @@ public class IAnimalTest<T extends IAnimal> {
 		Boolean ss = ((s == null) ? DEFAULT_ISSECRET : s);
 		Boolean ee = ((e == null) ? DEFAULT_ISENDANGERED : e);
 		Boolean bb = ((b == null) ? DEFAULT_ISBOSS : b);
-		IAnimal animal = mock(IAnimal.class);
+		IAnimal animal = Mockito.mock(IAnimal.class);
 		when(animal.getXP()).thenReturn(ii);
 		when(animal.isSecret()).thenReturn(ss);
 		when(animal.isEndangered()).thenReturn(ee);
