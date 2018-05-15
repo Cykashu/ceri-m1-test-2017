@@ -23,7 +23,7 @@ public class IAnimalTest<T extends IAnimal> {
 		Integer ii = i;
 		if (ii == null) {ii = DEFAULT_XP;}
 		Boolean ss = s;
-		if (ss == null) {ss = DEFAULT_ISSECRET;};
+		if (ss == null) {ss = DEFAULT_ISSECRET;}
 		Boolean ee = e;
 		if (ee == null) {ee = DEFAULT_ISENDANGERED;}
 		Boolean bb = b;
