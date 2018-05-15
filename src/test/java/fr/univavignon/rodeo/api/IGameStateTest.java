@@ -17,22 +17,22 @@ public class IGameStateTest {
 		return gamestate;
 	}
 	@Before
-	public void doTest_Init() {
+	public void doTestInit() {
 		this.gamestate = createNew();
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void doTest_CatchAnimal() {
+	public void doTestCatchAnimal() {
 		gamestate.catchAnimal(null);
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void doTest_GetSpecieLevelForNULL() {
+	public void doTestGetSpecieLevelForNULL() {
 		gamestate.getSpeciesLevel(null);
 	}
 	
 	@Test
-	public void doTest_GetProgression() {
+	public void doTestGetProgression() {
 		int progression = this.gamestate.getProgression();
 		assertTrue(((progression >= 0) && (progression <= 100)));
 	}

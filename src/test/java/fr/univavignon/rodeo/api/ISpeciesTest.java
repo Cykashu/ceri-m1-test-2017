@@ -24,7 +24,7 @@ public class ISpeciesTest<T extends ISpecies> {
 		return species;
 	}
 	@Before
-	public void doTest_Init() {
+	public void doTestInit() {
 		species = Mockito.mock(ISpecies.class);
 	}
 	

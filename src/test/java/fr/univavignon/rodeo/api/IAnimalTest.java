@@ -32,7 +32,7 @@ public class IAnimalTest<T extends IAnimal> {
 		return animal;
 	}
 	@Before
-	public void doTest_Init() {
+	public void doTestInit() {
 		animal = createNew(null, null, null, null);
 	}
 	@Test

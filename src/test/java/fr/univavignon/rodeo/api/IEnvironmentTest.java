@@ -24,7 +24,7 @@ public class IEnvironmentTest<T extends IEnvironment> {
 		return environment;
 	}
 	@Before
-	public void doTest_Init() {
+	public void doTestInit() {
 		environment = createNew(null, null);
 	}
 	

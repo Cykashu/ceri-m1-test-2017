@@ -27,7 +27,7 @@ public class IEnvironmentProviderTest {
 		return environmentprovider;
 	}
 	@Before
-	public void doTest_Init() {
+	public void doTestInit() {
 		environmentprovider = createNew(null, null);
 	}
 }

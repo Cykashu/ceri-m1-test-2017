@@ -16,17 +16,17 @@ public class IGameStateProviderTest {
 		return gamestateprovider;
 	}
 	@Before
-	public void doTest_Init() {
+	public void doTestInit() {
 		this.gamestateprovider = createNew();
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void doTest_GetNULL() {
+	public void doTestGetNULL() {
 		this.gamestateprovider.get(null);
 	}
 	
 	@Test
-	public void doTest_GetNotNULL() {
+	public void doTestGetNotNULL() {
 		assertNotNull(this.gamestateprovider.get("Name"));
 	}
 }
