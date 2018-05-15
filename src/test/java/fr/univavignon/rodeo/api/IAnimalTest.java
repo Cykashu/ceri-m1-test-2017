@@ -20,10 +20,14 @@ public class IAnimalTest<T extends IAnimal> {
 	protected boolean EXPECTED_ISBOSS = DEFAULT_ISBOSS;
 	protected IAnimal animal;
 	public static IAnimal createNew(Integer i, Boolean s, Boolean e, Boolean b) {
-		Integer ii = ((i == null) ? DEFAULT_XP : i);
-		Boolean ss = ((s == null) ? DEFAULT_ISSECRET : s);
-		Boolean ee = ((e == null) ? DEFAULT_ISENDANGERED : e);
-		Boolean bb = ((b == null) ? DEFAULT_ISBOSS : b);
+		Integer ii = i;
+		if (ii == null) {ii = DEFAULT_XP;}
+		Boolean ss = s;
+		if (ss == null) {ss = DEFAULT_ISSECRET;};
+		Boolean ee = e;
+		if (ee == null) {ee = DEFAULT_ISENDANGERED;}
+		Boolean bb = b;
+		if (bb == null) {bb = DEFAULT_ISBOSS;}
 		IAnimal animal = Mockito.mock(IAnimal.class);
 		when(animal.getXP()).thenReturn(ii);
 		when(animal.isSecret()).thenReturn(ss);
