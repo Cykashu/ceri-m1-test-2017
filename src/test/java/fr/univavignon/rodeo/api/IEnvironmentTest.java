@@ -12,8 +12,8 @@ public class IEnvironmentTest<T extends IEnvironment> {
 	protected static final int DEFAULT_AREAS = 0;
 	protected static final List<ISpecies> DEFAULT_SPECIES = new ArrayList<>();
 	
-	protected int EXPECTED_AREAS;
-	protected List<ISpecies> EXPECTED_SPECIES;
+	protected int EXPECTED_AREAS = DEFAULT_AREAS;
+	protected List<ISpecies> EXPECTED_SPECIES = DEFAULT_SPECIES;
 	protected IEnvironment environment;
 	public static IEnvironment createNew(Integer i, List<ISpecies> l) {
 		Integer ii = ((i == null) ? DEFAULT_AREAS : i);
