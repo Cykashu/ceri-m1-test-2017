@@ -6,7 +6,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.thenReturn;
 
 public class ISpeciesTest<T extends ISpecies> {
 	protected static final int DEFAULT_AREA = 0;
