@@ -22,7 +22,7 @@ public abstract class Animal implements IAnimal {
 		this.xp = xp;
 		this.issecrect = s;
 		this.isendangered = e;
-		this.isboss = s;
+		this.isboss = b;
 	}
 	@Override
 	public int getXP() {

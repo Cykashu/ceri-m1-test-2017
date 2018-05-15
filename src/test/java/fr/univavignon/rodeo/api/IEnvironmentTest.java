@@ -16,11 +16,11 @@ public class IEnvironmentTest<T extends IEnvironment> {
 	protected List<ISpecies> EXPECTED_SPECIES;
 	protected IEnvironment environment;
 	public static IEnvironment createNew(Integer i, List<ISpecies> l) {
-		if (i == null) {i = DEFAULT_AREAS;}
-		if (l == null) {l = DEFAULT_SPECIES;}
+		Integer ii = ((i == null) ? DEFAULT_AREAS : i);
+		List<ISpecies> ll = ((l == null) ? DEFAULT_SPECIES : l);
 		IEnvironment environment = Mockito.mock(IEnvironment.class);
-		when(environment.getAreas()).thenReturn(i);
-		when(environment.getSpecies()).thenReturn(l);
+		when(environment.getAreas()).thenReturn(ii);
+		when(environment.getSpecies()).thenReturn(ll);
 		return environment;
 	}
 	@Before

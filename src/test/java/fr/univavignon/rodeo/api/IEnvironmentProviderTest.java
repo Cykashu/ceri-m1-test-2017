@@ -16,11 +16,11 @@ public class IEnvironmentProviderTest {
 	protected Map<String, IEnvironment> EXPECTED_ENVIRONMENTS = DEFAULT_ENVIRONMENTS;
 	protected IEnvironmentProvider environmentprovider;
 	public static IEnvironmentProvider createNew(List<String> l, Map<String, IEnvironment> m) {
-		if (l == null) {l = DEFAULT_ENVIRONMENTLIST;}
-		if (m == null) {m = DEFAULT_ENVIRONMENTS;}
+		List<String> ll = ((l == null) ? DEFAULT_ENVIRONMENTLIST : l);
+		Map<String, IEnvironment> mm = ((m == null) ? DEFAULT_ENVIRONMENTS : m);
 		IEnvironmentProvider environmentprovider = Mockito.mock(IEnvironmentProvider.class);
-		when(environmentprovider.getAvailableEnvironments()).thenReturn(l);
-		for (Map.Entry<String, IEnvironment> entry : m.entrySet()) {
+		when(environmentprovider.getAvailableEnvironments()).thenReturn(ll);
+		for (Map.Entry<String, IEnvironment> entry : mm.entrySet()) {
 			when(environmentprovider.getEnvironment(entry.getKey())).thenReturn(entry.getValue());
 		}
 		

@@ -16,11 +16,11 @@ public class ISpeciesTest<T extends ISpecies> {
 	protected List<IAnimal> EXPECTED_ANIMALS = DEFAULT_ANIMALS;
 	protected ISpecies species;
 	public static ISpecies createNew(Integer i, List<IAnimal> l) {
-		if (i == null) {i = DEFAULT_AREA;}
-		if (l == null) {l = DEFAULT_ANIMALS;}
+		Integer ii = ((i == null) ? DEFAULT_AREA : i);
+		List<IAnimal> ll = ((l == null) ? DEFAULT_ANIMALS : l);
 		ISpecies species = Mockito.mock(ISpecies.class);
-		when(species.getArea()).thenReturn(i);
-		when(species.getAnimals()).thenReturn(l);
+		when(species.getArea()).thenReturn(ii);
+		when(species.getAnimals()).thenReturn(ll);
 		return species;
 	}
 	@Before

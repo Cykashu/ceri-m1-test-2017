@@ -8,7 +8,7 @@ import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.when;
 
 public class IGameStateProviderTest {
-	IGameStateProvider gamestateprovider;
+	private IGameStateProvider gamestateprovider;
 	public static IGameStateProvider createNew() {
 		IGameStateProvider gamestateprovider = Mockito.mock(IGameStateProvider.class);
 		when(gamestateprovider.get(null)).thenThrow(IllegalArgumentException.class);
