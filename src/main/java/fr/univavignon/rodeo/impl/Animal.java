@@ -12,11 +12,11 @@ import fr.univavignon.rodeo.api.IAnimal;
  * @author uapv1604337
  */
 public abstract class Animal implements IAnimal {
-	protected String name;
-	protected int xp;
-	protected boolean issecrect;
-	protected boolean isendangered;
-	protected boolean isboss;
+	protected final String name;
+	protected final int xp;
+	protected final boolean issecrect;
+	protected final boolean isendangered;
+	protected final boolean isboss;
 	public Animal(String n, int xp, boolean s, boolean e, boolean b) {
 		this.name = n;
 		this.xp = xp;

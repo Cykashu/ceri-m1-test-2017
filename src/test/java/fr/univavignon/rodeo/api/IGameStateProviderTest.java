@@ -5,14 +5,16 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 
 public class IGameStateProviderTest {
 	private IGameStateProvider gamestateprovider;
 	public static IGameStateProvider createNew() {
 		IGameStateProvider gamestateprovider = Mockito.mock(IGameStateProvider.class);
+		IGameState n = IGameStateTest.createNew();
+		when(gamestateprovider.get(any())).thenReturn(n);
 		when(gamestateprovider.get(null)).thenThrow(IllegalArgumentException.class);
-		when(gamestateprovider.get(any())).thenReturn(IGameStateTest.createNew());
 		return gamestateprovider;
 	}
 	@Before
@@ -20,13 +22,13 @@ public class IGameStateProviderTest {
 		this.gamestateprovider = createNew();
 	}
 	
-	@Test(expected = IllegalArgumentException.class)
-	public void doTestGetNULL() {
+	@Test(expected=IllegalArgumentException.class)
+	public void doTestGetWithNULLExpectIllegalArgumentException() {
 		this.gamestateprovider.get(null);
 	}
 	
 	@Test
-	public void doTestGetNotNULL() {
+	public void doTestGetWithNotNULL() {
 		assertNotNull(this.gamestateprovider.get("Name"));
 	}
 }
